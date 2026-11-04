@@ -124,6 +124,7 @@ img {
 }
 
 .btn--ghost:hover {
+  color: var(--orange);
   background: rgba(255, 255, 255, 0.1);
 }
 
