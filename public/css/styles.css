@@ -747,6 +747,20 @@ img {
   padding-top: 24px;
 }
 
+@media (max-width: 980px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+  .hero-media {
+    order: -1;
+    width: 100%;
+  }
+  .site-header--home .container,
+  .site-header--home .nav-links {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 40px;
@@ -781,6 +795,10 @@ img {
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .playbook-grid {
+    grid-template-columns: 1fr;
   }
 }
 
