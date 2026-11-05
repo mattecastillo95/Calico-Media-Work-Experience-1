@@ -14,6 +14,16 @@ app.post('/contact', (req, res) => {
   const email = (req.body.email || '').trim();
   const message = (req.body.message || '').trim();
 
+  const website = req.body.website;
+  if (typeof website === 'string' && website.trim() !== '') {
+    return res.json({ ok: true });
+  }
+
+  const formLoadedAt = Number(req.body.formLoadedAt);
+  if (!req.body.formLoadedAt || !Number.isFinite(formLoadedAt) || Date.now() - formLoadedAt < 3000) {
+    return res.json({ ok: true });
+  }
+
   if (!name || !email || !message) {
     return res.status(400).json({ ok: false, error: 'Please fill in your name, email and message.' });
   }

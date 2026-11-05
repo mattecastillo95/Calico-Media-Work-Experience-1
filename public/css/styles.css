@@ -658,6 +658,14 @@ img {
   resize: vertical;
 }
 
+.contact-form__honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .form-status {
   margin-top: 16px;
   font-weight: 700;
